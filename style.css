@@ -1,0 +1,191 @@
+body .header, body .ratings, body .testimonies, body .footer {
+  width: 87%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-family: "League Spartan", sans-serif;
+  height: 100vh;
+}
+
+body {
+  background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+  background-color: white;
+}
+
+body .header {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+body .header h1 {
+  color: #502050;
+  font-size: 40px;
+  line-height: 80%;
+}
+
+body .header p {
+  margin-top: 1.5rem;
+  color: #937b92;
+}
+
+body .ratings__source {
+  background-color: #f7f2f7;
+  margin: 1rem auto;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 500px;
+}
+
+body .ratings__source p {
+  color: #502050;
+  font-weight: 700;
+  margin-top: .5rem;
+}
+
+body .testimonies {
+  margin: 3rem auto;
+}
+
+body .testimonies__wrapper {
+  background-color: #502050;
+  margin: 1rem 0;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+body .testimonies__wrapper .testimony__userInfo {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+body .testimonies__wrapper .testimony__userPicture {
+  width: 40px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 1rem;
+}
+
+body .testimonies__wrapper .testimony__userName {
+  color: white;
+  font-weight: 500;
+}
+
+body .testimonies__wrapper .testimony__userStatus {
+  color: #ee68a4;
+  font-weight: 400;
+}
+
+body .testimonies__wrapper .testimony__text {
+  color: white;
+  text-align: left;
+  font-weight: 400;
+}
+
+body .footer {
+  color: #937b92;
+}
+
+body .footer a {
+  color: #502050;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-weight: 500;
+}
+
+body .footer a:hover {
+  color: #ee68a4;
+}
+
+@media only screen and (min-width: 920px) {
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    height: 100%;
+    padding: 15vh 10vw 0;
+  }
+  body .header {
+    margin: 0;
+    float: left;
+    width: 50%;
+  }
+  body .header h1 {
+    width: 73%;
+    margin: 0;
+    text-align: left;
+    font-size: 50px;
+  }
+  body .header p {
+    width: 73%;
+    margin: 0;
+    text-align: left;
+    margin-top: 1.5rem;
+  }
+  body .ratings {
+    float: left;
+    width: 50%;
+    margin: 0 0 11vh;
+  }
+  body .ratings__source {
+    margin: 0 auto 1rem;
+    padding: .75rem 0;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body .ratings__source img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 .25rem;
+  }
+  body .ratings__source img:first-of-type {
+    margin-left: 2rem;
+  }
+  body .ratings__source img:last-of-type {
+    margin-right: 2rem;
+  }
+  body .ratings__source:first-of-type {
+    position: relative;
+    right: 5%;
+  }
+  body .ratings__source:last-of-type {
+    position: relative;
+    left: 5%;
+  }
+  body .testimonies {
+    margin: 0 0 4rem;
+    width: 100%;
+    clear: both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  body .testimonies__wrapper {
+    width: 32%;
+  }
+  body .testimonies__wrapper:nth-of-type(2) {
+    position: relative;
+    top: 1rem;
+  }
+  body .testimonies__wrapper:last-of-type {
+    position: relative;
+    top: 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

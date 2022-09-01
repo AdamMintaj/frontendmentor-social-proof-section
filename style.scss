@@ -1,0 +1,216 @@
+// Colors and ready chunks of style
+
+$darkMagenta: hsl(300, 43%, 22%);
+$pink: hsl(333, 80%, 67%);
+$darkGrayishMagenta: hsl(303, 10%, 53%);
+$lightGrayishMagenta: hsl(300, 24%, 96%);
+
+%centered-content-block {
+    width: 87%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+// Styles - mobile first
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 18px;
+    font-family: "League Spartan", sans-serif;
+    height: 100vh;
+}
+
+body {
+    background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+    background-color: white;
+
+    .header {
+        @extend %centered-content-block;
+        margin-top: 4rem; 
+        margin-bottom: 2rem;
+
+        h1 {
+            color: $darkMagenta;
+            font-size: 40px;
+            line-height: 80%;
+        }
+
+        p {
+            margin-top: 1.5rem;
+            color: $darkGrayishMagenta;
+        }
+    }
+
+    .ratings {
+        @extend %centered-content-block;
+
+        &__source {
+            background-color: $lightGrayishMagenta;
+            margin: 1rem auto;
+            border-radius: 10px;
+            padding: 1rem;
+            max-width: 500px;
+
+            p {
+                color: $darkMagenta;
+                font-weight: 700;
+                margin-top: .5rem;
+            }
+        }
+    }
+
+    .testimonies {
+        @extend %centered-content-block;
+        margin: 3rem auto;
+
+        &__wrapper {
+            background-color: $darkMagenta;
+            margin: 1rem 0;
+            border-radius: 10px;
+            padding: 2rem;
+
+            .testimony {
+                &__userInfo {
+                    text-align: left;
+                    margin-bottom: 1rem;
+                }
+
+                &__userPicture {
+                    width: 40px;
+                    border-radius: 100%;
+                    float: left;
+                    margin-right: 1rem;
+                }
+                
+                &__userName {
+                    color: white;
+                    font-weight: 500;
+                }
+
+                &__userStatus {
+                    color: $pink;
+                    font-weight: 400;
+                }
+
+                &__text {
+                    color: white;
+                    text-align: left;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .footer {
+        @extend %centered-content-block;
+        color: $darkGrayishMagenta;
+        
+        a {
+            color: $darkMagenta;
+            text-decoration: none;
+            transition: .5s;
+            font-weight: 500;
+
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+}
+
+// Adjustment for desktop version
+
+@media only screen and (min-width: 920px) {
+    body {
+        background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+        // padding: 5rem 7rem 0;
+        height: 100%;
+        padding: 15vh 10vw 0;
+
+
+        .header {
+            margin: 0;
+            float: left;
+            width: 50%;
+    
+            h1 {
+                width: 73%;
+                margin: 0;
+                text-align: left;
+                font-size: 50px;
+            }
+    
+            p {
+                width: 73%;
+                margin: 0;
+                text-align: left;
+                margin-top: 1.5rem;
+            }
+        }
+    
+        .ratings {
+            float: left;
+            width: 50%;
+            margin: 0 0 11vh;
+    
+            &__source {
+                margin: 0 auto 1rem;
+                padding: .75rem 0;
+                width: 90%;
+                display: flex;
+
+                img {
+                    align-self: center;
+                    margin: 0 .25rem;
+                }
+
+                img:first-of-type {
+                    margin-left: 2rem;
+                }
+
+                img:last-of-type {
+                    margin-right: 2rem;
+                }
+            }
+
+            &__source:first-of-type {
+                position: relative;
+                right: 5%;
+            }
+
+            &__source:last-of-type {
+                position: relative;
+                left: 5%;
+            }
+        }
+    
+        .testimonies {
+            margin: 0 0 4rem;
+            width: 100%;
+            clear: both;
+            display: flex;
+            justify-content: space-between;
+    
+            &__wrapper {
+                width: 32%;
+            }
+
+            &__wrapper:nth-of-type(2) {
+                position: relative;
+                top: 1rem;
+            }
+
+            &__wrapper:last-of-type {
+                position: relative;
+                top: 2rem;
+            }
+        }
+    }
+}
