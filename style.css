@@ -44,6 +44,10 @@ body .header__title p {
   color: #937b92;
 }
 
+body .header__hiddenHeader {
+  display: none;
+}
+
 body .header__ratings {
   margin-top: 2rem;
 }
@@ -64,6 +68,10 @@ body .header__ratings .rating p {
 
 body .testimonials {
   margin: 3rem auto;
+}
+
+body .testimonials__hiddenHeader {
+  display: none;
 }
 
 body .testimonials__wrapper {

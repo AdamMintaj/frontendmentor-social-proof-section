@@ -52,6 +52,10 @@ body {
         }
 
         // This is the part of the header with the stars
+        &__hiddenHeader {
+            display: none;
+        }
+
         &__ratings {
             margin-top: 2rem;
 
@@ -75,6 +79,10 @@ body {
     .testimonials {
         @extend %centered-content-block;
         margin: 3rem auto;
+
+        &__hiddenHeader {
+            display: none;
+        }
 
         &__wrapper {
             background-color: $darkMagenta;
