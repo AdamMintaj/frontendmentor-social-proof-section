@@ -10,7 +10,7 @@ The challenge here was to build a simple component with an optimal layout depend
 
 ## How it went
 
-I completed the challenge using some simple css. I don't think it's anything special but it was a nice exercice anyway. In case you're curious how I did you may see the outcome [here](https://frontendmentor-3-column-preview-card-component-main-adammintaj.vercel.app/)
+I completed the challenge using some simple css. I don't think it's anything special but it was a nice exercice anyway. In case you're curious how I did you may see the outcome [here](https://frontendmentor-social-proof-section-nuerqe2cr-adammintaj.vercel.app/)
 
 ## In case you're curious,
 

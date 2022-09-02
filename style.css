@@ -1,4 +1,4 @@
-body .header, body .ratings, body .testimonies, body .footer {
+body .header, body .testimonials, body .footer {
   width: 87%;
   margin: 0 auto;
   text-align: center;
@@ -14,7 +14,6 @@ body .header, body .ratings, body .testimonies, body .footer {
 html {
   font-size: 18px;
   font-family: "League Spartan", sans-serif;
-  height: 100vh;
 }
 
 body {
@@ -29,18 +28,27 @@ body .header {
   margin-bottom: 2rem;
 }
 
-body .header h1 {
+body .header__title {
+  margin: 0 auto;
+  max-width: 550px;
+}
+
+body .header__title h1 {
   color: #502050;
   font-size: 40px;
   line-height: 80%;
 }
 
-body .header p {
+body .header__title p {
   margin-top: 1.5rem;
   color: #937b92;
 }
 
-body .ratings__source {
+body .header__ratings {
+  margin-top: 2rem;
+}
+
+body .header__ratings .rating {
   background-color: #f7f2f7;
   margin: 1rem auto;
   border-radius: 10px;
@@ -48,46 +56,46 @@ body .ratings__source {
   max-width: 500px;
 }
 
-body .ratings__source p {
+body .header__ratings .rating p {
   color: #502050;
   font-weight: 700;
   margin-top: .5rem;
 }
 
-body .testimonies {
+body .testimonials {
   margin: 3rem auto;
 }
 
-body .testimonies__wrapper {
+body .testimonials__wrapper {
   background-color: #502050;
   margin: 1rem 0;
   border-radius: 10px;
   padding: 2rem;
 }
 
-body .testimonies__wrapper .testimony__userInfo {
+body .testimonials__wrapper .testimonial__userInfo {
   text-align: left;
   margin-bottom: 1rem;
 }
 
-body .testimonies__wrapper .testimony__userPicture {
+body .testimonials__wrapper .testimonial__userPicture {
   width: 40px;
   border-radius: 100%;
   float: left;
   margin-right: 1rem;
 }
 
-body .testimonies__wrapper .testimony__userName {
+body .testimonials__wrapper .testimonial__userName {
   color: white;
   font-weight: 500;
 }
 
-body .testimonies__wrapper .testimony__userStatus {
+body .testimonials__wrapper .testimonial__userStatus {
   color: #ee68a4;
   font-weight: 400;
 }
 
-body .testimonies__wrapper .testimony__text {
+body .testimonials__wrapper .testimonial__text {
   color: white;
   text-align: left;
   font-weight: 400;
@@ -109,63 +117,74 @@ body .footer a:hover {
   color: #ee68a4;
 }
 
-@media only screen and (min-width: 920px) {
-  body {
-    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
-    height: 100%;
-    padding: 15vh 10vw 0;
-  }
-  body .header {
-    margin: 0;
-    float: left;
-    width: 50%;
-  }
-  body .header h1 {
-    width: 73%;
-    margin: 0;
-    text-align: left;
-    font-size: 50px;
-  }
-  body .header p {
-    width: 73%;
-    margin: 0;
-    text-align: left;
-    margin-top: 1.5rem;
-  }
-  body .ratings {
-    float: left;
-    width: 50%;
-    margin: 0 0 11vh;
-  }
-  body .ratings__source {
-    margin: 0 auto 1rem;
-    padding: .75rem 0;
-    width: 90%;
+@media only screen and (min-width: 900px) {
+  html {
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  body .ratings__source img {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin: 0 .25rem;
+  body {
+    background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+    padding: 3rem 6vw 0;
   }
-  body .ratings__source img:first-of-type {
-    margin-left: 2rem;
+  body .header {
+    width: 100%;
+    margin: 0 0 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  body .ratings__source img:last-of-type {
-    margin-right: 2rem;
+  body .header__title {
+    margin: 0;
+    width: 40%;
+    text-align: left;
   }
-  body .ratings__source:first-of-type {
+  body .header__title h1 {
+    font-size: 50px;
+  }
+  body .header__ratings {
+    margin: 0;
+    width: 57%;
+  }
+  body .header__ratings .rating {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+    width: 90%;
+  }
+  body .header__ratings .rating__stars {
+    margin: 0 2rem;
+  }
+  body .header__ratings .rating p {
+    margin: 0;
+  }
+  body .header__ratings .rating:first-of-type {
+    margin-bottom: 1rem;
     position: relative;
     right: 5%;
   }
-  body .ratings__source:last-of-type {
+  body .header__ratings .rating:last-of-type {
+    margin-top: 1rem;
     position: relative;
     left: 5%;
   }
-  body .testimonies {
+  body .testimonials {
     margin: 0 0 4rem;
     width: 100%;
     clear: both;
@@ -176,16 +195,25 @@ body .footer a:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  body .testimonies__wrapper {
+  body .testimonials__wrapper {
     width: 32%;
   }
-  body .testimonies__wrapper:nth-of-type(2) {
+  body .testimonials__wrapper:nth-of-type(2) {
     position: relative;
     top: 1rem;
   }
-  body .testimonies__wrapper:last-of-type {
+  body .testimonials__wrapper:last-of-type {
     position: relative;
     top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1125px) {
+  body {
+    padding: 3rem 10vw 0;
+  }
+  body .header__ratings {
+    width: 50%;
   }
 }
 /*# sourceMappingURL=style.css.map */
